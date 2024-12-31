@@ -1,0 +1,273 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(0, 0, 50);
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 0 20px;
+    }
+    main hr{
+        border: 0;
+        background: cyan;
+        height: 1.2px;
+        margin: 60px 84px;
+    }
+    .left{
+        font-size: 1.5rem;
+    }
+    .right a{
+        color: white;
+        text-decoration: none;
+    }
+    .right a:hover{
+        color: cyan;
+    }
+
+
+
+    .firstsection{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px 0;   
+    }
+    .firstsection > div{
+        width: 30%;
+    }
+    .leftsection{
+        font-size: 3rem;
+        align-items: center;
+    }
+    .leftsection .resume{
+        padding: 10px;
+        margin: 80px 20px 0 0;
+        font-size: 15px;
+        font-weight: bolder;
+        color: gray;
+        background-color:rgb(255, 255, 255);
+        border: solid cyan 2px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .resume:hover{
+        color: white;
+        background-color: rgb(149, 149, 149);
+        border: solid rgb(0, 0, 33) 2px;
+    }
+
+    .leftsection .github{
+        padding: 10px;
+        margin: 80px 0 0 0;
+        font-size: 15px;
+        font-weight: bolder;
+        color: gray;
+        background-color:rgb(255, 255, 255);
+        border: solid cyan 2px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .github:hover{
+        color: white;
+        background-color: rgb(149, 149, 149);
+        border: solid rgb(0, 0, 33) 2px;
+    }
+
+    .text-cyan{
+        color: cyan;
+    }
+    .text-gray{
+        color: gray;
+    }
+    .rightsection img{
+        width: 80%;
+        height: 95%;
+    }
+    #element{
+        color: cyan;
+    }
+
+
+
+
+    .secondsection{
+        max-width: 80vw;
+        margin: auto;
+        height: 55vh;
+    }
+    .secondsection h1{
+        font-size: 2rem;
+    }
+    .secondsection .box{
+        background: white;
+        width: 80vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex
+    }
+    .secondsection .vertical{
+        background-color: white;
+        width: 1px;
+        height: 100px;
+        margin: 0 100px;
+    }
+    .vertical .name{
+        margin-left: 10px;
+        width: 150px;
+    }
+    .vertical-disc{
+        position:relative;
+        margin-left: 20px;
+        top: 10px;
+        width: 150px;
+        color: gray;
+        font-size: 12px;
+    }
+    .img-top{
+        height: 43px;
+        top: -52px;
+        left: -17px;
+        position: relative;
+    }
+
+
+
+    .thirdsection{
+
+        max-width: 80vw;
+        margin: auto;
+        height: 59vh;
+
+    }
+    .thirdsection div{
+        font-size: 18px;
+        word-spacing: 0;
+        margin-bottom: 100px;
+    }
+    .thirdsection b, strong{
+        font-size: 21px;
+    }
+    .thirdsection h1{
+        font-size: 2rem;
+    }
+
+
+
+    .fourthsection{
+
+        max-width: 80vw;
+        margin: auto;
+        height: auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .fourthsection .project {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        
+    }
+    .fourthsection h1{
+        font-size: 2rem;
+
+    }
+    .fourthsection h3{
+        font-size: 1.5rem;
+
+    }
+    .fourthsection p{
+        margin: 10px 0;
+    }
+    .fourthsection .project li{
+        list-style: disc;
+        margin-left: 20px;
+    }
+    .fourthsection .project ul li {
+        margin-bottom: 5px;
+    }
+
+
+
+
+    .fifthsection div{
+        font-size: medium;
+    }
+    .fifthsection{
+
+        max-width: 80vw;
+        margin: auto;
+        padding: 0 0 50px 0;
+    }
+    .fifthsection h1{
+        font-size: 2rem;
+
+    }
+    .fifthsection div{
+        font-size: medium;
+    }
+
+
+    
+    .foot ul, li {
+        text-decoration: none;
+        font-weight: normal;
+        color: white;
+        list-style: none;
+        display: flex;
+    }
+    
+    .foot a{
+        text-decoration: none;
+        padding: 5px;
+    }
+    .last-foot{
+        color: rgb(0, 0, 0);
+        font-weight: bolder;
+        background-color: rgb(173, 173, 173);
+        padding: 10px 0 10px 0;
+        align-items: center;
+
+    }
+
+    
+    .container{
+        max-width: 500px;
+        border: gray solid 1px;
+        padding: 2%;
+    }
+
+
+    .nav{
+        padding-left: 30%;
+
+    }
+
+    .social-links{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .social-links a{
+        margin: 0 10px;
+        text-decoration: none;
+        color: #529aff;
+        font-size: 20px;
+    }
+
+
+
