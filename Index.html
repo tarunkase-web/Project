@@ -401,7 +401,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
                 throw new Error('Failed to send email');
             }
         } catch (error) {
-            document.getElementById('statusMessage').innerText = 'This is not You. It is our problem while receiving email. Please try again later.';
+            document.getElementById('statusMessage').innerText = 'This is not You. It is our problem <br> while receiving email. Please try again later.';
             document.getElementById('statusMessage').style.color = 'red';
         }
     });
