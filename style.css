@@ -116,7 +116,7 @@
     }
     .secondsection .box{
         background: white;
-        width: 80vw;
+        width: auto;
         height: 2px;
         margin: 56px 0;
         display: flex
