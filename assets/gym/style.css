@@ -1,0 +1,150 @@
+.firstsect a{
+    color: white;
+    text-decoration: none;
+}
+.firstsect a:hover{
+    color: white;
+}
+#mynavbar a{
+    color: white;
+}
+
+.carousel-inner{
+    height: 650px;
+}
+.carousel-inner img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.about{
+    margin: 2%;
+    padding: 20px 20px 20px 20px ;
+}
+.about p{
+    font-size: 1.5rem;
+    color: rgb(103, 103, 103);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0 20px 0 0 ;
+
+}
+
+.about img{
+    padding: 0 0 0 50px;
+    border-radius: 50%;
+}
+
+.service{
+    background: linear-gradient(rgb(93, 204, 247),rgb(133, 212, 243),white 95%);
+    padding: auto;
+}
+.service p{
+    text-align: justify;
+    align-items: center;
+    width: 90%;
+    padding: 0 0 0 5%;
+    
+}
+.service div p{
+    color: rgb(255, 255, 255);
+}
+
+
+.gallery{
+    padding: 10px 0 50px 0;
+    margin: 50px 0 50px 0;
+    background-color: white;
+}
+
+.gallery img{
+    height: 100%; 
+    width: 100%; 
+    margin: 50px 10px 0 0;
+    padding: 0 0 50px 0;
+    border-radius: 10px;
+}
+
+.read{
+    color: white;
+    text-decoration: none;
+}
+
+
+.block form{
+    padding: 1%;
+    border: solid gray 2px;
+}
+.block textarea{
+    width: 100%;
+}
+
+.block iframe{
+    height: 100%;
+}
+
+.contact{
+    
+    background: linear-gradient(rgb(255, 255, 255),rgb(230, 230, 230),rgb(255, 255, 255) 95%);
+}
+
+.foot{
+    background-color: rgb(39, 38, 38);
+    color: white;
+}
+.foot img{
+    padding-bottom: 50px;
+}
+.foot h2 h2{
+    font-size: large;
+}
+.foot li{
+    list-style: none;
+    font-size: smaller;
+}
+
+.foot a{
+    text-decoration: none;
+    color: white;
+}
+.last {
+    padding: 1%;
+    background-color: rgb(47, 47, 47);
+}
+
+
+
+
+
+
+
+
+
+.home{
+    display: flex;
+    max-width: 100%;
+    height: 55vh;
+    background-position:left;
+    background-image: url(img/image10.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 500px 0 0 0;
+}
+.home h1{
+    color: rgb(255, 0, 0);
+    font-size: 3rem;
+    width: 500px;
+    height: 200px;
+    padding: 0 0 0 0;
+}
+
+
+
+
+
+.slides{
+    display:contents;
+    width: 100%;
+    max-height: 55vh;
+    position:relative;
+    padding: 500px 0 0 0;
+}
