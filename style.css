@@ -60,16 +60,18 @@
         margin: 80px 20px 0 0;
         font-size: 15px;
         font-weight: bolder;
-        color: gray;
         background-color:rgb(255, 255, 255);
         border: solid cyan 2px;
         border-radius: 20px;
         cursor: pointer;
     }
-    .resume:hover{
-        color: white;
-        background-color: rgb(149, 149, 149);
-        border: solid rgb(0, 0, 33) 2px;
+    .resume a{
+        color: gray;
+        text-decoration: none;
+    }
+    
+    .resume a:hover{
+        color: rgb(0, 0, 50);
     }
 
     .leftsection .github{
@@ -77,16 +79,17 @@
         margin: 80px 0 0 0;
         font-size: 15px;
         font-weight: bolder;
-        color: gray;
         background-color:rgb(255, 255, 255);
         border: solid cyan 2px;
         border-radius: 20px;
         cursor: pointer;
     }
-    .github:hover{
-        color: white;
-        background-color: rgb(149, 149, 149);
-        border: solid rgb(0, 0, 33) 2px;
+    .github a:hover{
+        color: rgb(0, 0, 50);
+    }
+    .github a{
+        color: gray;
+        text-decoration: none;
     }
 
     .text-cyan{
@@ -94,6 +97,8 @@
     }
     .text-gray{
         color: gray;
+        padding: 5px 5px 5px 5px;
+        margin:  5px 5px 5px 5px;
     }
     .rightsection img{
         width: 80%;
@@ -106,45 +111,59 @@
 
 
 
+    
+
     .secondsection{
         max-width: 80vw;
         margin: auto;
         height: 55vh;
     }
-    .secondsection h1{
-        font-size: 2rem;
-    }
-    .secondsection .box{
-        background: white;
-        width: auto;
-        height: 2px;
-        margin: 56px 0;
-        display: flex
-    }
-    .secondsection .vertical{
-        background-color: white;
-        width: 1px;
-        height: 100px;
-        margin: 0 100px;
-    }
-    .vertical .name{
-        margin-left: 10px;
-        width: 150px;
-    }
     .vertical-disc{
-        position:relative;
-        margin-left: 20px;
-        top: 10px;
-        width: 150px;
         color: gray;
         font-size: 12px;
     }
+    
     .img-top{
         height: 43px;
-        top: -52px;
+        /*top: -52px;
         left: -17px;
-        position: relative;
+        position: relative;*/
     }
+
+    /* General styles for the qualifications section 
+.qualifications-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }*/
+  .qualifications {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap if necessary */
+    gap: 10px; /* Adds spacing between items */
+    justify-content: center; /* Centers the items horizontally */
+  }
+  
+  .qualification-item {
+    flex: 1 1 calc(25% - 10px); /* Responsive width for desktop */
+    text-align: center;
+    background-color: #f4f4f4;
+    color: black;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .qualifications {
+      flex-direction: column; /* Stacks items vertically */
+    }
+  
+    .qualification-item {
+      flex: 1 1 100%; /* Full width for mobile */
+    }
+  }
+
 
 
 
