@@ -23,72 +23,114 @@
         <link rel="stylesheet" href="style.css">
 
         <!-------------FontAwesome Link------------->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"> 
+<!--         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+ -->
     
 <style>
-    .skills-container {
+       .skills-section {
       max-width: 900px;
       margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+      overflow: hidden;
     }
-    .skill-category {
+    .skills-section h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #2563eb;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .skills-section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+      box-shadow: 0 0 10px #3b82f6aa;
+    }
+    .skills-category {
       margin-bottom: 2rem;
     }
-    .category-title {
-      font-size: 1.5rem;
+    .skills-category h3 {
       font-weight: 600;
+      font-size: 1.5rem;
+      color: #1e40af;
       margin-bottom: 1rem;
-      border-bottom: 3px solid #0d6efd;
-      display: inline-block;
-      padding-bottom: 0.25rem;
-      color: #0d6efd;
+      border-left: 5px solid #3b82f6;
+      padding-left: 0.75rem;
+      text-shadow: 0 0 5px #3b82f6aa;
     }
     .skills-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1rem 1.5rem;
       justify-content: center;
     }
     .skill-item {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(13, 110, 253, 0.2);
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: white;
       padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #0d6efd;
+      box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
       cursor: default;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      min-width: 140px;
       user-select: none;
+      min-width: 140px;
+      justify-content: center;
     }
-    .skill-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 25px rgba(13, 110, 253, 0.4);
-    }
-    .skill-icon {
-      width: 24px;
-      height: 24px;
-      fill: #0d6efd;
-      flex-shrink: 0;
+    .skill-item i {
+      font-size: 1.3rem;
+      filter: drop-shadow(0 0 2px #60a5fa);
       transition: transform 0.3s ease;
     }
-    .skill-item:hover .skill-icon {
-      transform: scale(1.2);
+    .skill-item:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(59, 130, 246, 0.8);
+    }
+    .skill-item:hover i {
+      transform: rotate(15deg) scale(1.2);
+      filter: drop-shadow(0 0 6px #93c5fd);
+    }
+    /* Soft skills style */
+    .soft-skill-item {
+      background: #e0e7ff;
+      color: #1e40af;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px #a5b4fc;
+      cursor: default;
+      user-select: none;
+      min-width: 160px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .soft-skill-item:hover {
+      background-color: #3b82f6;
+      color: white;
+      box-shadow: 0 8px 25px #3b82f6cc;
+      transform: translateY(-4px);
     }
     /* Responsive */
     @media (max-width: 576px) {
-      .skill-item {
-        min-width: 120px;
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-      }
-      .skill-icon {
-        width: 20px;
-        height: 20px;
+      .skill-item,
+      .soft-skill-item {
+        min-width: 100%;
+        justify-content: flex-start;
+        padding-left: 1.5rem;
       }
     }
 </style>
@@ -118,9 +160,7 @@
                     <a class="nav-link" href="#skill">Skills</a>
                 </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link" href="#edu">Education</a>
-                </li>
+                
                 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#project" role="button" data-bs-toggle="dropdown">Projects</a>
@@ -133,6 +173,11 @@
                   <li><a class="dropdown-item" href="#python">Color Detection</a></li>
                 </ul>
               </li> 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#edu">Education</a>
+                </li>
+                
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact Me</a>
               </li>  
@@ -174,153 +219,7 @@
 
 
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
         
-<hr id="skill">
-<section class="skills-container" aria-label="Skills Section">
-    <h2>My Skills</h2>
-
-    <div class="skill-category" aria-label="Technical Skills">
-      <h3 class="category-title">Technical Skills</h3>
-      <div class="skills-list">
-        <div class="skill-item" tabindex="0" aria-label="HTML skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M1.5 0h21l-1.909 21.5L12 24l-8.591-2.5L1.5 0zM17.5 7.5h-11l.2 2.5h10.6l-.4 4.5-4.8 1.3-4.8-1.3-.3-3.5h2.5l.1 1.5 2.5.7 2.5-.7.3-3.5z"/>
-          </svg>
-          HTML
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="CSS skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M1.5 0h21l-1.909 21.5L12 24l-8.591-2.5L1.5 0zM17.5 7.5h-11l.2 2.5h10.6l-.4 4.5-4.8 1.3-4.8-1.3-.3-3.5h2.5l.1 1.5 2.5.7 2.5-.7.3-3.5z"/>
-          </svg>
-          CSS
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="JavaScript skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.628-5.372-12-12-12zm2.4 17.4c-.6 1.2-2.4 1.5-3.6 1.2l-.3-1.8c.9.3 1.8 0 2.1-.9l-3.6-2.1v-3h6v6zm3.6-6.6h-1.8v-1.8h1.8v1.8z"/>
-          </svg>
-          JavaScript
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="Bootstrap skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.628-5.372-12-12-12zm3.6 17.4c-.6 1.2-2.4 1.5-3.6 1.2l-.3-1.8c.9.3 1.8 0 2.1-.9l-3.6-2.1v-3h6v6zm3.6-6.6h-1.8v-1.8h1.8v1.8z"/>
-          </svg>
-          Bootstrap
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="Figma skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0a6 6 0 0 0-6 6 6 6 0 0 0 6 6h6a6 6 0 0 0 0-12h-6zM6 12a6 6 0 0 0 0 12 6 6 0 0 0 6-6v-6H6z"/>
-          </svg>
-          Figma
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="C# skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.628-5.372-12-12-12zm3.6 17.4c-.6 1.2-2.4 1.5-3.6 1.2l-.3-1.8c.9.3 1.8 0 2.1-.9l-3.6-2.1v-3h6v6zm3.6-6.6h-1.8v-1.8h1.8v1.8z"/>
-          </svg>
-          C#
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="ASP.Net skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.628-5.372-12-12-12zm3.6 17.4c-.6 1.2-2.4 1.5-3.6 1.2l-.3-1.8c.9.3 1.8 0 2.1-.9l-3.6-2.1v-3h6v6zm3.6-6.6h-1.8v-1.8h1.8v1.8z"/>
-          </svg>
-          ASP.Net
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="Entity Framework Core skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.628-5.372-12-12-12zm3.6 17.4c-.6 1.2-2.4 1.5-3.6 1.2l-.3-1.8c.9.3 1.8 0 2.1-.9l-3.6-2.1v-3h6v6zm3.6-6.6h-1.8v-1.8h1.8v1.8z"/>
-          </svg>
-          Entity Framework Core
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="MS-SQL skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.628-5.372-12-12-12zm3.6 17.4c-.6 1.2-2.4 1.5-3.6 1.2l-.3-1.8c.9.3 1.8 0 2.1-.9l-3.6-2.1v-3h6v6zm3.6-6.6h-1.8v-1.8h1.8v1.8z"/>
-          </svg>
-          MS-SQL
-        </div>
-        <div class="skill-item" tabindex="0" aria-label="PHP skill">
-          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.628-5.372-12-12-12zm3.6 17.4c-.6 1.2-2.4 1.5-3.6 1.2l-.3-1.8c.9.3 1.8 0 2.1-.9l-3.6-2.1v-3h6v6zm3.6-6.6h-1.8v-1.8h1.8v1.8z"/>
-          </svg>
-          PHP
-        </div>
-      </div>
-    </div>
-
-    <div class="skill-category" aria-label="Soft Skills">
-      <h3 class="category-title">Soft Skills</h3>
-      <div class="skills-list">
-        <div class="skill-item" tabindex="0" style="color:#444; box-shadow:none; background:#e9ecef; cursor:default;">
-          Problem Solving
-        </div>
-        <div class="skill-item" tabindex="0" style="color:#444; box-shadow:none; background:#e9ecef; cursor:default;">
-          Team Collaboration
-        </div>
-        <div class="skill-item" tabindex="0" style="color:#444; box-shadow:none; background:#e9ecef; cursor:default;">
-          Communication
-        </div>
-        <div class="skill-item" tabindex="0" style="color:#444; box-shadow:none; background:#e9ecef; cursor:default;">
-          Dedication & Work Ethic
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-        
-    <hr id="edu">
-
-    <div class="secondsection">
-                <h2>Education</h2>
-                <span class="text-gray">
-                    Knowledge I have get so far.
-                </span>
-                <div class="qualifications">
-                <div class="qualification-item">
-                    Diploma in Computer Engineering<br>
-                    <div class="vertical-disc">Dr. D.Y.Patil Polytechnic Kasba Bawada Kolhapur</div>
-
-                </div>
-                
-                <div class="qualification-item">
-                    C Programming Language <br>
-                <div class="vertical-disc">Disha Computer Institute Kolhappur</div>
-                </div>
-
-                <div class="qualification-item">
-                    C++ Programming Language <br>
-                <div class="vertical-disc">Disha Computer Institute Kolhappur</div>
-
-                </div>
-
-                <div class="qualification-item">
-                    B.Tech in Computer Science Engineering<br> 
-                <div class="vertical-disc">Vishveshwaraya Technical Campus Patgaon Miraj Sangali</div>
-                    
-                </div>
-
-                <div class="qualification-item">
-                    3 Months Internship In Web Designing<br>
-                <div class="vertical-disc">Platominds Services Pvt. Ltd. Kolhapur</div>
-                </div>
-
-                <div class="qualification-item">
-                    Full Stack Web Developer Internship<br>
-                <div class="vertical-disc">Revolution IT Pvt. Ltd. Kolhapur</div>
-                </div>
-                
-                </div>
-              </div>
-              
-
-    
-
         
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <hr id="about">
@@ -335,6 +234,65 @@
     </section>
 
 
+
+
+        
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        
+<hr id="skill">
+<section class="skills-section" aria-label="Skills Section">
+    <h2>My Skills</h2>
+
+    <div class="skills-category" aria-label="Technical Skills">
+      <h3>Technical Skills</h3>
+      <div class="skills-list">
+        <div class="skill-item" title="HTML5">
+          <i class="fab fa-html5" aria-hidden="true"></i> HTML
+        </div>
+        <div class="skill-item" title="CSS3">
+          <i class="fab fa-css3-alt" aria-hidden="true"></i> CSS
+        </div>
+        <div class="skill-item" title="JavaScript">
+          <i class="fab fa-js-square" aria-hidden="true"></i> JavaScript
+        </div>
+        <div class="skill-item" title="Bootstrap">
+          <i class="fab fa-bootstrap" aria-hidden="true"></i> Bootstrap
+        </div>
+        <div class="skill-item" title="Figma">
+          <i class="fab fa-figma" aria-hidden="true"></i> Figma
+        </div>
+        <div class="skill-item" title="C#">
+          <i class="fas fa-code" aria-hidden="true"></i> C#
+        </div>
+        <div class="skill-item" title="ASP.NET">
+          <i class="fas fa-server" aria-hidden="true"></i> ASP.Net
+        </div>
+        <div class="skill-item" title="Entity Framework Core">
+          <i class="fas fa-database" aria-hidden="true"></i> Entity Framework Core
+        </div>
+        <div class="skill-item" title="MS-SQL">
+          <i class="fas fa-database" aria-hidden="true"></i> MS-SQL
+        </div>
+        <div class="skill-item" title="PHP">
+          <i class="fab fa-php" aria-hidden="true"></i> PHP
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-category" aria-label="Soft Skills">
+      <h3>Soft Skills</h3>
+      <div class="skills-list">
+        <div class="soft-skill-item" title="Problem Solving">Problem Solving</div>
+        <div class="soft-skill-item" title="Team Collaboration">Team Collaboration</div>
+        <div class="soft-skill-item" title="Communication">Communication</div>
+        <div class="soft-skill-item" title="Dedication and Work Ethic">Dedication &amp; Work Ethic</div>
+      </div>
+    </div>
+  </section>
+
+    
 
     
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------->    
@@ -473,6 +431,60 @@
 </section>
 
 
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        
+    <hr id="edu">
+
+    <div class="secondsection">
+                <h2>Education</h2>
+                <span class="text-gray">
+                    Knowledge I have get so far.
+                </span>
+                <div class="qualifications">
+                <div class="qualification-item">
+                    Diploma in Computer Engineering<br>
+                    <div class="vertical-disc">Dr. D.Y.Patil Polytechnic Kasba Bawada Kolhapur</div>
+
+                </div>
+                
+                <div class="qualification-item">
+                    C Programming Language <br>
+                <div class="vertical-disc">Disha Computer Institute Kolhappur</div>
+                </div>
+
+                <div class="qualification-item">
+                    C++ Programming Language <br>
+                <div class="vertical-disc">Disha Computer Institute Kolhappur</div>
+
+                </div>
+
+                <div class="qualification-item">
+                    B.Tech in Computer Science Engineering<br> 
+                <div class="vertical-disc">Vishveshwaraya Technical Campus Patgaon Miraj Sangali</div>
+                    
+                </div>
+
+                <div class="qualification-item">
+                    3 Months Internship In Web Designing<br>
+                <div class="vertical-disc">Platominds Services Pvt. Ltd. Kolhapur</div>
+                </div>
+
+                <div class="qualification-item">
+                    Full Stack Web Developer Internship<br>
+                <div class="vertical-disc">Revolution IT Pvt. Ltd. Kolhapur</div>
+                </div>
+                
+                </div>
+              </div>
+              
+
+
+
+        
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------->    
     <hr id="contact">
@@ -633,6 +645,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
 
 <!--&amp; == &-->
+
 
 
 
