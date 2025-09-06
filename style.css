@@ -46,7 +46,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 20px 0;   
+        margin: 20px 0; 
+         box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
     }
     .firstsection > div{
         width: 30%;
@@ -290,6 +291,7 @@
         color: #529aff;
         font-size: 20px;
     }
+
 
 
 
