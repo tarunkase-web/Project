@@ -184,17 +184,35 @@
         font-size: 21px;
     }
     .thirdsection h1{
-        font-size: 2rem;
+        font-weight: 500;
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
     }
-
+.thirdsection h1::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: white;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+      box-shadow: 0 0 10px #3b82f6aa;
+}
 
 
     .fourthsection{
 
-        max-width: 80vw;
-        margin: auto;
-        height: auto;
-        font-family: Arial, Helvetica, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      height: auto;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 15px;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+      overflow: hidden;
     }
     .fourthsection .project {
         margin-bottom: 30px;
@@ -203,10 +221,24 @@
         border-radius: 5px;
         
     }
-    .fourthsection h1{
-        font-size: 2rem;
-
+     .fourthsection h1{
+        font-weight: 500;
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
     }
+.fourthsection h1::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: white;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+      box-shadow: 0 0 10px #3b82f6aa;
+}
     .fourthsection h3{
         font-size: 1.5rem;
 
@@ -235,9 +267,23 @@
         padding: 0 0 50px 0;
     }
     .fifthsection h1{
-        font-size: 2rem;
-
+        font-weight: 500;
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
     }
+.fifthsection h1::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: white;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+      box-shadow: 0 0 10px #3b82f6aa;
+}
     .fifthsection div{
         font-size: medium;
     }
@@ -291,6 +337,7 @@
         color: #529aff;
         font-size: 20px;
     }
+
 
 
 
